@@ -25,12 +25,35 @@ Contains the style for the floating, bottom right, menubar.
     text-decoration: none;
     margin-right: 10px;
   }
-  #language-switch-img {
-    filter: none !important
+  .language-switch-img {
+    /*filter: none !important;*/
+    height: 100% !important;
+    width: 40px;
+    display: block;
   } 
+  #language-switch {
+    display: -webkit-inline-box;
+    flex-direction: column-reverse;
+    margin-right: 10px;
+  }
+  #globe {cursor: pointer;}
+  #languages.hidden {
+    opacity: 0;
+    pointer-events:none
+  }
+  #languages {
+    transition: opacity 0.2s ease-in-out;
+    display: inline-grid;
+    position: absolute;
+    pointer-events:all;
+    left: 21px;
+    bottom: 41px;
+  }
   #menubar img{
-    height: inherit;
+    height: 40px;
+  }
+  .icon-darkmode-enabled{
+    /* Only changes the icons that has this class*/
     filter: var(--icon-color);
   }
-  
-  
+

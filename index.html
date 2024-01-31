@@ -1,16 +1,18 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Check the current status of uBlock Origin's ability to bypass YouTube's adblock detection. Updates, discussions, and solutions available.">
     <link rel="stylesheet" href="./css/root.css">
     <link rel="stylesheet" href="./css/menubar.css">
     <link rel="stylesheet" href="./css/banner.css">
     <link rel="stylesheet" href="./css/about.css">
     
     <title class="translatable" data-translate="html-title">Does uBlock Origin (uBO) currently bypass YouTube's adblock detection?</title>
-    <link rel="preconnect" href="https://api.fonts.coollabs.io" crossorigin />
     <link rel="shortcut icon" href="./assets/icons/favicon.svg" type="image/x-icon" id="favicon">
-    <link href="https://api.fonts.coollabs.io/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://api.fonts.coollabs.io/css2?family=Montserrat&display=swap" as="style" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://api.fonts.coollabs.io/css2?family=Montserrat&display=swap"></noscript>
     <script type="module" src="./main.js"></script>
     <script type="module" src="./modules/are_codes_equal.mjs"></script>
     <script type="module" src="./modules/quick_filter_button_change.mjs"></script>
@@ -21,14 +23,21 @@
     <div id="menubar">
         <div>
             <!-- Language button is a WIP until something good is planned.-->
-            <a style="display: block; "id="language-switch" href="./?lang=es-ES" class="new-tab">
-                <img src="assets/icons/spanish.svg" alt="language-switch" id="language-switch-img">
-            </a>
-            <a id="subreddit" href="https://www.reddit.com/r/uBlockOrigin/" class="new-tab">
+            <!-- update: made something fairly good ;)-->
+            <div id="language-switch">
+                <img src="assets/icons/globe.svg" id="globe" class="language-switch-img icon-darkmode-enabled">
+                <div id="languages" class="hidden">
+                    <a href="./?lang=tr-TR" title="Turkish" class="new-tab"><img src="assets/icons/turkish.svg" alt="language-switch" class="language-switch-img"></a>
+                    <a href="./?lang=fr-FR" title="French" class="new-tab"><img src="assets/icons/french.svg" alt="language-switch" class="language-switch-img"></a>
+                    <a href="./?lang=pl-PL" title="Polish" class="new-tab"><img src="assets/icons/polish.svg" alt="language-switch" class="language-switch-img"></a>
+                    <a href="./?lang=es-ES" title="Spanish" class="new-tab"><img src="assets/icons/spanish.svg" alt="language-switch" class="language-switch-img"></a>
+                </div>
+            </div>
+            <a id="subreddit" href="https://www.reddit.com/r/uBlockOrigin/" class="new-tab icon-darkmode-enabled">
                 <img src="assets/icons/reddit.svg" alt="uBO subreddit">
             </a>
             <a id="github-repo" href="https://github.com/drHyperion451/does-uBO-bypass-yt/tree/dev" class="new-tab">
-                <img src="assets/icons/code.svg" alt="Github Repo">
+                <img src="assets/icons/code.svg" alt="Github Repo" class="icon-darkmode-enabled">
             </a>
         </div>
     </div>
@@ -98,3 +107,4 @@
         <p class="translatable" data-translate="h2-4-2">Please keep in mind we are all volunteers. We don't get any revenue from this and we cannot be online 24/7. Thanks for understanding!</p>
     </div>
 </body>
+</html>
